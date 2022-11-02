@@ -2,4 +2,18 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to the f2wb33mosra server #{title}
+  button(type="button", class="btn btn-warning",onclick='doBump()') pressme
+  <br>
+  <div id="Bump">Bump the count</div>
+  <br>
+  script. 
+      count=0;
+      Bump=1
+      function doBump() 
+      {
+      count=count+Bump;
+      Bump=Bump+1;
+      print=document.getElementById("Bump");
+      print.innerHTML='Count '+count+' with bump '+Bump;  
+      }
